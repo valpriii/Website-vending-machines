@@ -1,6 +1,17 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { importProvidersFrom } from '@angular/core';
+import { FormsModule } from '@angular/forms';  // Импортируем FormsModule
+import { provideRouter } from '@angular/router';
+import { AuthComponent } from './app/auth/auth.component';
 import { AppComponent } from './app/app.component';
+import { HeaderComponent } from './app/header/header.component';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter([
+      { path: 'login', component: AuthComponent },
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+    ]),
+    importProvidersFrom(FormsModule)  // Подключаем FormsModule для работы с ngModel
+  ]
+}).catch(err => console.error(err));

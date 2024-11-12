@@ -1,0 +1,86 @@
+.container {
+    text-align: center;
+    background-image: url('auth_background.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.header h2 {
+    color: #04382E;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    margin-bottom: 130px;
+}
+
+h1 {
+    color: #04382E;
+    font-family: Arial, sans-serif;
+    font-size: 66px;
+    margin-bottom: 80px;
+}
+
+.form {
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: 1000px;
+    height: 90px;
+    border: 3px solid #04382E;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #04382E;
+    padding: 0 15px;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+}
+
+.input-field::placeholder {
+    color: rgba(4, 56, 46, 0.7);
+}
+
+.forgot-password {
+    text-align: right;
+    width: 1000px;
+    margin: 0 auto;
+    color: #04382E;
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.enter {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    width: 500px;
+    height: 80px;
+    margin-bottom: 130px;
+    background-color: #04382E;
+}
+
+.enter:hover {
+	transition: all 0.2s;
+	box-shadow: 0 11px 18px rgb(65 132 144 / 20%), 0 7px 10px rgb(0 0 0 / 18%);
+    cursor: pointer;
+}
+.enter:active {
+	background-color: #7BC0AD;
+}
