@@ -1,0 +1,105 @@
+/* Основной контейнер для центрирования содержимого */
+.component-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('2main_background.svg');
+    background-size: cover;
+    background-repeat: repeat;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Стили для поисковой панели */
+.search-bar {
+    display: flex;
+    width: 1000px;
+    height: 50px;
+    align-items: center;
+    padding: 7px;
+    border: 3px solid #04382E;
+    margin-bottom: 50px;
+}
+
+.search-icon {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 25px;
+    color: rgba(4, 56, 46, 1);
+    font-family: Arial, sans-serif;
+    flex-grow: 1;
+    padding-right: 10px;
+    min-width: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+input::placeholder {
+    color: rgba(4, 56, 46, 0.9);
+}
+
+/* Стили для карточек */
+.action-cards {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на следующую строку */
+    justify-content: center; /* Центрирует карточки на экране */
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.action-card {
+    position: relative;
+    width: calc(33% - 50px); /* Каждая карточка занимает примерно треть ширины экрана с учетом промежутков */
+    max-width: 500px; /* Ограничение по максимальной ширине */
+    min-width: 400px; /* Минимальная ширина карточки для удобства на маленьких экранах */
+    height: auto;
+    background-color: rgba(123, 192, 173, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+.info-icon:hover {
+    cursor: pointer;
+}
+
+.card-image {
+    width: 350px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+button {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 23px;
+    background-color: #04382E;
+    padding: 20px;
+}
+
+button:hover {
+    transition: all 0.2s;
+    box-shadow: 0 11px 18px rgb(65 132 144 / 20%), 0 7px 10px rgb(0 0 0 / 18%);
+    cursor: pointer;
+}
+button:active {
+    background-color: #7BC0AD;
+}

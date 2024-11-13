@@ -5,6 +5,8 @@ import { provideRouter } from '@angular/router';
 import { AuthComponent } from './app/auth/auth.component';
 import { AppComponent } from './app/app.component';
 import { HeaderComponent } from './app/header/header.component';
+import { FooterComponent } from './app/footer/footer.component';
+import { ActionComponent } from './app/action/action.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
