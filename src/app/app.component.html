@@ -1,3 +1,3 @@
-<app-header></app-header>
-<app-form-patient-record></app-form-patient-record>
-<app-footer></app-footer>
+<app-header *ngIf="authService.getAuthStatus()"></app-header> <!-- Показать, если пользователь авторизован -->
+<router-outlet></router-outlet> <!-- Здесь будет отображаться активный маршрут -->
+<app-footer></app-footer> <!-- Футер всегда отображается -->

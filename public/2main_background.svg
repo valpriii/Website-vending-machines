@@ -1,6 +1,6 @@
-<svg width="1920" height="4005" viewBox="0 0 1920 4005" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1920" height="4369" viewBox="0 0 1920 4369" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_33_2)">
-<rect width="1920" height="4005" fill="url(#paint0_linear_33_2)"/>
+<rect width="1920" height="4369" fill="url(#paint0_linear_33_2)"/>
 <g clip-path="url(#clip1_33_2)">
 <mask id="mask0_33_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-443" y="-501" width="2714" height="2715">
 <path d="M-443 -500H2271V2214H-443V-500Z" fill="white"/>
@@ -137,13 +137,13 @@
 </g>
 </g>
 <defs>
-<linearGradient id="paint0_linear_33_2" x1="0" y1="0" x2="263.495" y2="4111.17" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_33_2" x1="0" y1="0" x2="313.324" y2="4481.34" gradientUnits="userSpaceOnUse">
 <stop stop-color="#AEECDB"/>
 <stop offset="0.527533" stop-color="#DAF9E9"/>
 <stop offset="0.98" stop-color="#AEECDB"/>
 </linearGradient>
 <clipPath id="clip0_33_2">
-<rect width="1920" height="4005" fill="white"/>
+<rect width="1920" height="4369" fill="white"/>
 </clipPath>
 <clipPath id="clip1_33_2">
 <rect width="1020" height="956" fill="white" transform="translate(-403 -427)"/>
