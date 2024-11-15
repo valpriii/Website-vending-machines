@@ -21,7 +21,7 @@ export class AuthService {
   // Метод для логаута
   logout() {
     this.isAuthenticated = false;
-    this.router.navigate(['/login']); // Переход на страницу логина
+    this.router.navigate(['/login'], { replaceUrl: true });; // Переход на страницу логина
   }
 
   // Метод для сброса состояния аутентификации

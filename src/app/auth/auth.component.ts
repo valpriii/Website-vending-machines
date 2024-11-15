@@ -21,7 +21,7 @@ export class AuthComponent {
   onSubmit() {
     if (this.authService.login(this.username, this.password)) {
       alert('Данные введены корректно');
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home'], { replaceUrl: true });
     } else {
       alert('Неверные ФИО или пароль. Попробуйте снова.');
     }

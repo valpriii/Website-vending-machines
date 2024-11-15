@@ -25,9 +25,11 @@ export class AppComponent implements OnInit {
   ) {}
 
   async ngOnInit() {
+
     // Сброс состояния авторизации при переходе на страницу авторизации
     if (this.router.url === '/login') {
-      this.authService.resetAuth();
+      this.authService.resetAuth(); // Сброс состояния авторизации
+      this.router.navigate(['/login'], { replaceUrl: true });
     }
 
     // Проверяем, пустые ли коллекции перед добавлением данных

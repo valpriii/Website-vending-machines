@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-patient-record',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './form-patient-record.component.css'
 })
 export class FormPatientRecordComponent {
+  constructor(private router: Router) {}
 
+  goBack(): void {
+    this.router.navigate(['/home']); // Переход на главную страницу
+  }
 }
