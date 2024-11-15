@@ -4,11 +4,13 @@ import { AuthComponent } from './auth/auth.component';
 import { ActionComponent } from './action/action.component';
 import { NotificationComponent } from './notification/notification.component';
 import { FormPatientRecordComponent } from './form-patient-record/form-patient-record.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AuthGuard } from './auth.guard';
 
 // Определение маршрутов
 export const routes: Routes = [
   { path: 'login', component: AuthComponent },
+  { path: 'change-password', component: ChangePasswordComponent },
   { path: 'home', component: ActionComponent, canActivate: [AuthGuard] },
   { path: 'notification', component: NotificationComponent, canActivate: [AuthGuard] }, 
   { path: 'form-patient-record', component: FormPatientRecordComponent, canActivate: [AuthGuard] },

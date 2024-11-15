@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, addDoc, setDoc, doc, getDoc, getDocs, query, orderBy,} from '@angular/fire/firestore';
+import { Firestore, collection, addDoc, setDoc, doc, getDoc, getDocs, query, orderBy, updateDoc} from '@angular/fire/firestore';
 import { environment } from '../../environments/environment';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
@@ -9,6 +9,20 @@ import { getFirestore } from 'firebase/firestore';
 })
 export class FirebaseService {
   constructor(private firestore: Firestore) {}
+
+
+    // Получение всех данных из коллекции
+    async getCollectionData(collectionName: string): Promise<any[]> {
+      const colRef = collection(this.firestore, collectionName);
+      const snapshot = await getDocs(colRef);
+      return snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    }
+  
+    // Обновление документа в коллекции
+    async updateDocument(collectionName: string, docId: string, data: any): Promise<void> {
+      const docRef = doc(this.firestore, `${collectionName}/${docId}`);
+      await updateDoc(docRef, data);
+    }
 
     // Метод для извлечения документов из коллекции
     async getDocs(collectionName: string): Promise<any[]> {
