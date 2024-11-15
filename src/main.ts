@@ -3,6 +3,7 @@ import { importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app/app.routes';
+import { enableProdMode } from '@angular/core';
 
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
@@ -16,6 +17,10 @@ import { ActionComponent } from './app/action/action.component';
 import { AuthService } from './app/services/auth.service';
 import { NotificationComponent } from './app/notification/notification.component';  
 
+if (environment.production) {
+  enableProdMode();
+}
+
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter([
@@ -26,8 +31,8 @@ bootstrapApplication(AppComponent, {
     ]),
     importProvidersFrom(FormsModule),
     AuthService,
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideFirestore(() => getFirestore()),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)), // Подключение Firebase
+    provideFirestore(() => getFirestore()), // Подключение Firestore
     importProvidersFrom(AppRoutingModule)
   ]
 }).catch(err => console.error(err));

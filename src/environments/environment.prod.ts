@@ -3,6 +3,7 @@ export const environment = {
     firebaseConfig: {
       apiKey: "AIzaSyAF4mg7wwIyhZsWxUmJJBozxGUHo6I0wu0",
       authDomain: "controlvending-cd83c.firebaseapp.com",
+      databaseURL: "https://controlvending-cd83c-default-rtdb.firebaseio.com",
       projectId: "controlvending-cd83c",
       storageBucket: "controlvending-cd83c.firebasestorage.app",
       messagingSenderId: "822018788484",

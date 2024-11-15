@@ -11,7 +11,7 @@ export class AuthService {
 
   // Метод для логина
   login(username: string, password: string): boolean {
-    if (username === 'Потапова Валерия Романовна' && password === '22052004') {
+    if (username === 'Потапова Валерия Романовна' && password === '89899563191') {
       this.isAuthenticated = true;
       return true;
     }
