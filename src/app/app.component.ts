@@ -12,7 +12,7 @@ import { AuthService } from './services/auth.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule, CommonModule, AuthComponent, HeaderComponent, ActionComponent, NotificationComponent, FooterComponent],
+  imports: [RouterModule, CommonModule, AuthComponent, HeaderComponent, ActionComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

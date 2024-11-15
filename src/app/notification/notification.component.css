@@ -1,0 +1,100 @@
+/* Общий контейнер для уведомлений */
+.notification-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    color:#04382E;    
+    background-image: url('main_background.svg');
+    background-size: cover;
+    background-repeat: repeat;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  .back-button {
+    background-color: #04382E;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    text-align: left;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 15px;
+    font-size: 23px;
+  }
+  
+  .back-button:hover {
+    transition: all 0.2s;
+    box-shadow: 0 11px 18px rgb(65 132 144 / 20%), 0 7px 10px rgb(0 0 0 / 18%);
+    cursor: pointer;
+  }
+  
+  .back-button:active {
+    background-color: #7BC0AD;
+  }
+  
+  /* Заголовок даты */
+  .date-header {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 550;
+    margin-top: 70px;
+    margin-bottom: 38px;
+    color:#04382E;
+  }
+  
+  /* Контейнер для уведомлений */
+  .notifications {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Одиночное уведомление */
+  .notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #00695c;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: background-color 0.3s ease;
+    margin-bottom: 23px;
+  }
+  
+  .icon {
+    width: 30px;
+    height: auto;
+    padding-right: 10px;
+  }
+  
+  /* Время уведомления */
+  .notification-time {
+    flex: 0 0 130px; /* Фиксированная ширина */
+    font-size: 25px;
+    color:#04382E;
+    text-align: center;
+  }
+  
+  /* Иконка уведомления */
+  .notification-icon {
+    flex: 0 0 230px; /* Фиксированная ширина */
+    text-align: center;
+  }
+  
+  .notification-icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Текст уведомления */
+  .notification-text {
+    flex: 1; /* Растягивается на оставшееся место */
+    font-size: 25px;
+    color:#04382E;
+  }
+  

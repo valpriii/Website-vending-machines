@@ -1,1 +1,30 @@
-<p>notification works!</p>
+<div class="notification-container">
+    
+    <button class="back-button" (click)="goBack()">
+        <img src="left_arrow.svg" alt="Назад" class="icon"> Вернуться на главную </button>
+
+    <ng-container *ngFor="let group of notifications">
+      <!-- Отображение даты группы -->
+      <div class="date-header">
+        {{ formatDate(group.date) }} <!-- Отображение только даты -->
+      </div>
+  
+      <!-- Уведомления для текущей даты -->
+      <div class="notification-item" *ngFor="let notification of group.items">
+        <div class="notification-time">
+          {{ formatDate(notification.date, true) }} <!-- Отображение только времени -->
+        </div>
+  
+        <!-- Колонка иконки -->
+        <div class="notification-icon">
+          <img [src]="getIconPath(notification.type)" alt="Notification Icon" />
+        </div>
+  
+        <!-- Колонка текста -->
+        <div class="notification-text">
+          {{ notification.message }}
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  

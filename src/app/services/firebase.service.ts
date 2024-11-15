@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, addDoc, setDoc, doc, getDoc, getDocs } from '@angular/fire/firestore';
+import { Firestore, collection, addDoc, setDoc, doc, getDoc, getDocs, query, orderBy,} from '@angular/fire/firestore';
 import { environment } from '../../environments/environment';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
@@ -9,6 +9,18 @@ import { getFirestore } from 'firebase/firestore';
 })
 export class FirebaseService {
   constructor(private firestore: Firestore) {}
+
+    // Метод для извлечения документов из коллекции
+    async getDocs(collectionName: string): Promise<any[]> {
+      const collRef = collection(this.firestore, collectionName);
+      const q = query(collRef, orderBy('date', 'desc')); // Сортировка по дате
+      const snapshot = await getDocs(q);
+  
+      return snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+    }
 
   // Метод для проверки, пустая ли коллекция
   async isCollectionEmpty(collectionName: string): Promise<boolean> {
